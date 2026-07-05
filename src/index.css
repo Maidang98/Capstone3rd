@@ -252,10 +252,7 @@
 }
 
 .why-choose-us {
-  background-image: url("/images/whychooseus.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: #000;
   position: relative;
 }
 
