@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+<<<<<<< HEAD
 import tailwindcss from '@tailwindcss/vite'
 import path from "path"
 
@@ -16,3 +17,10 @@ export default defineConfig({
     },
   },
 });
+=======
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react()],
+})
+>>>>>>> 89e95904d8eb143b02064eacb90c609f999686ae
