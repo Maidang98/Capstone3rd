@@ -1,0 +1,393 @@
+/* HomeTemplate-Loading */
+.spinner-custom {
+  animation: spin 1s linear infinite;
+}
+
+.pulse-custom {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.bounce-custom {
+  animation: bounce 0.6s infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* HomeTemplate-Booking */
+.movie-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(220,53,69,0.3);
+  transition: all 0.5s ease;
+}
+
+.movie-img {
+  transition: transform 0.7s ease-out;
+}
+
+.movie-card:hover .movie-img {
+  transform: scale(1.05);
+}
+
+.movie-gradient {
+  background: linear-gradient(to top, #0f0f0f, rgba(24,24,24,0.2), transparent);
+}
+
+.movie-hover-overlay {
+  background-color: rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.movie-card:hover .movie-hover-overlay {
+  opacity: 1;
+}
+
+.movie-title {
+  min-height: 3.5rem;
+}
+
+.movie-desc {
+  min-height: 4rem; 
+}
+
+/* HomeTemplate-Header */
+.navbar.bg-dark {
+  background-color: #000 !important;
+}
+
+/* HomeTemplate-Footer */
+.footer-link {
+  color: #9ca3af;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.footer-link:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #999;
+  text-decoration: none;
+  transition: .35s;
+}
+
+.social-icon:hover {
+  background: #dc3545;
+  color: white;
+  border-color: #dc3545;
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(220, 53, 69, .7);
+}
+
+.back-top {
+  transition: .35s;
+}
+
+.back-top:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 18px rgba(220, 53, 69, .8);
+}
+
+.facebook {
+  color: #1877F2;
+}
+
+.instagram {
+  color: #E4405F;
+}
+
+.youtube {
+  color: #FF0000;
+}
+
+.twitter {
+  color: #ffffff;
+}
+
+/* HomeTemplate-HomeCarousel */
+.hero-section {
+  background: #000;
+}
+
+.hero-slide {
+  height: 850px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  justify-content: flex-start; 
+  padding-left: 40px;  
+  inset: 0;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,.95) 0%,
+    rgba(0,0,0,.7) 45%,
+    rgba(0,0,0,.2) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  pointer-events: auto; 
+}
+
+.glass-card {
+  max-width: 720px;
+  backdrop-filter: blur(16px);
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 24px;
+  padding: 40px;
+}
+
+.hero-title {
+  color: white;
+  font-weight: 900;
+  line-height: 1.1;
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  color: #d1d5db;
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+.rating-badge {
+  background: #ffc107;
+  color: black;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.hero-bottom-gradient {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(to top, #121212, transparent);
+  z-index: 0; 
+  pointer-events: none;
+}
+
+.promo-card {
+  background: #1b1b1b;
+  border: 1px solid #333;
+  border-radius: 20px;
+  padding: 30px;
+  height: 100%;
+  transition: .3s;
+}
+
+.promo-card:hover {
+  transform: translateY(-8px);
+  border-color: #dc3545;
+}
+
+.promo-card h4 {
+  color: white;
+}
+
+.promo-card p {
+  color: #adb5bd;
+}
+
+.promo-discount {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .hero-slide {
+    height: 650px;
+  }
+
+  .glass-card {
+    padding: 24px;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+}
+
+.why-choose-us {
+  background-image: url("/images/whychooseus.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.why-choose-us::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 0;
+}
+
+.why-choose-us .container {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* HomeTemplate-Detail */
+.cinema-tab {
+  background: #161616;
+  border: 1px solid #333;
+  color: #fff!important;
+  transition: all .3s;
+}
+
+.cinema-tab span {
+  color: #fff;
+  transition: all .3s;
+}
+
+.cinema-tab:hover {
+  background: #dc3545;
+  border-color: #dc3545;
+}
+
+.cinema-tab:hover span {
+  color: #fff!important;
+}
+
+.cinema-tab.active {
+  background: #dc3545;
+  border-color: #dc3545;
+}
+
+.cinema-tab.active span {
+  color: #fff!important;
+}
+
+/* Loading */
+.spinner-custom {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+.pulse-custom {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.bounce-custom {
+  animation: bounce 0.6s infinite alternate;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-6px); }
+}
+
+/* HomeTemplate-ListMovie */
+.bg-black {
+  background-color: #000 !important;
+}
+
+
+/* AdminTemplate */
+.nav-link-admin{
+  color:#cfcfcf;
+  transition:.3s;
+  margin-bottom:8px;
+}
+
+.nav-link-admin:hover{
+  background:#dc3545;
+  color:#fff !important;
+  transform:translateX(5px);
+}
+
+.active-link{
+  background:#dc3545;
+  color:#fff !important;
+  box-shadow:0 0 12px rgba(220,53,69,.4);
+}
+
+.sidebar-open{
+  transform:translateX(0);
+}
+
+.sidebar-close{
+  transform:translateX(-100%);
+}
+
+
+/* AdminTemplate-Film-addNew */
+/* AddNew.css */
+
+.form-control::placeholder,
+.form-control::-webkit-input-placeholder,
+textarea::placeholder {
+  color: #c9c9c9 !important;
+  opacity: 1;
+}
+
+.ant-picker input::placeholder {
+  color: #c9c9c9 !important;
+}
+
+.ant-picker {
+  background: #212529 !important;
+  color: white !important;
+}
+
+.ant-picker input {
+  color: white !important;
+}
+
+.ant-picker-suffix {
+  color: white !important;
+}
