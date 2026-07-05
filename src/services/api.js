@@ -2,12 +2,9 @@ import axios from "axios";
 
 const api = axios.create({
   baseURL: "https://movienew.cybersoft.edu.vn/api/",
-});
-
-
-api.interceptors.request.use((config) => {
-  console.log("Headers gửi đi:", config.headers);
-  return config;
+  headers: {
+    "Content-Type": "application/json",
+  },
 });
 
 const getUser = () => {
